@@ -1,0 +1,30 @@
+/*!
+ * ATITHYA EVENTS THANE
+ * 05 — Preferences & print
+ *
+ * Honours prefers-reduced-motion and provides a print stylesheet.
+ * Must load last so its !important overrides win.
+ *
+ * Load order matters: this file is linked from index.html in numeric order.
+ * Reordering the <link> tags changes the cascade.
+ */
+
+/* ==========================================================================
+   23. Preferences & print
+   ========================================================================== */
+@media (prefers-reduced-motion:reduce){
+  html:focus-within{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;scroll-behavior:auto !important;
+  }
+  [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
+  .line-mask > span{transform:none !important}
+  .hero__media img{animation:none;transform:none}
+  .drawer{transition:none}
+}
+@media print{
+  .nav,.drawer,.wa-float,.hero__media,.cta__media{display:none !important}
+  body{background:#fff;color:#000}
+  .section{padding-block:24px}
+}

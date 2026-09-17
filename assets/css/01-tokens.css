@@ -1,0 +1,42 @@
+/*!
+ * ATITHYA EVENTS THANE
+ * 01 — Design tokens
+ *
+ * Every colour, font, spacing step and easing curve the site uses.
+ * Change a value here and it updates everywhere — nothing else hard-codes a colour.
+ *
+ * Load order matters: this file is linked from index.html in numeric order.
+ * Reordering the <link> tags changes the cascade.
+ */
+
+/* ==========================================================================
+   1. Design tokens
+   ========================================================================== */
+:root{
+  --ivory:#FBF8F3;
+  --paper:#F3EDE4;
+  --champagne:#E7DAC5;
+  --blush:#E5D2CB;
+  --ink:#16130F;
+  --ink-2:#241F19;
+  --body:#4C443A;
+  --muted:#6F6558;   /* AA: 5.3:1 on ivory, 4.9:1 on paper */
+  --gold:#A98442;
+  --line:rgba(22,19,15,.14);
+  --line-soft:rgba(22,19,15,.075);
+  --line-dark:rgba(251,248,243,.2);
+
+  --ff-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --ff-sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+
+  --gutter:clamp(20px,5vw,72px);
+  --shell:1320px;
+  --measure:60ch;
+  --section:clamp(76px,10.5vw,164px);
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+
+  --nav-h:74px;
+}
+

@@ -1,0 +1,758 @@
+{
+  "site": {
+    "brandMark": "Atithya",
+    "brandSub": "Events Thane",
+    "brandFull": "Atithya Events Thane",
+    "whatsappNumber": "919137172872",
+    "phone": "+91 91371 72872",
+    "email": "hello@atithyaevents.in",
+    "city": "Thane & Mumbai",
+    "instagram": "https://www.instagram.com/atithya_events_thane/",
+    "directMessage": "Hi, I'd like to enquire about planning an event."
+  },
+  "seo": {
+    "title": "Atithya Events Thane | Wedding, Birthday & Celebration Planners",
+    "description": "Atithya Events Thane is a boutique events studio that designs and manages weddings, birthdays, baby showers, anniversaries, engagements and corporate celebrations — from first concept to the final toast.",
+    "canonical": "https://example.com/",
+    "ogSiteName": "Atithya Events Thane",
+    "ogTitle": "Atithya Events Thane — We Create Moments Worth Celebrating",
+    "ogDescription": "Thoughtfully planned celebrations, beautifully designed and flawlessly executed.",
+    "ogImage": "https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
+    "ogImageAlt": "A candlelit celebration table dressed with linen and seasonal flowers.",
+    "themeColor": "#FBF8F3"
+  },
+  "hero": {
+    "image": {
+      "src": "https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "alt": "A long celebration table dressed in linen, dried florals and candlelight before the guests arrive.",
+      "srcset": "https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w, https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&cs=tinysrgb&w=1800 1800w, https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&cs=tinysrgb&w=2400 2400w",
+      "sizes": "100vw",
+      "width": 2400,
+      "height": 1600
+    },
+    "eyebrow": "Events Studio",
+    "headlineLines": [
+      "We Create Moments",
+      "Worth <em class=\"italic\">Celebrating.</em>"
+    ],
+    "copy": "Thoughtfully planned celebrations, beautifully designed and flawlessly executed.",
+    "buttons": [
+      {
+        "style": "light",
+        "href": "#enquiry",
+        "label": "Plan Your Event"
+      },
+      {
+        "style": "onDark",
+        "href": "#work",
+        "label": "Explore Our Work"
+      }
+    ],
+    "tags": [
+      "Weddings",
+      "Birthdays",
+      "Baby Showers",
+      "Corporate"
+    ]
+  },
+  "categories": [
+    {
+      "num": "01",
+      "name": "Birthday",
+      "desc": "Milestone dinners, first birthdays and grown-up parties styled around the person — never a theme pack.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&fit=crop&w=760&h=950&crop=entropy&q=80",
+        "alt": "A dessert and cake table styled against exposed brick for a birthday dinner.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "02",
+      "name": "Baby Shower",
+      "desc": "Soft palettes, thoughtful details and a room calm enough for the mother-to-be to actually enjoy.",
+      "image": {
+        "src": "https://images.pexels.com/photos/32476128/pexels-photo-32476128.jpeg?auto=compress&cs=tinysrgb&w=760&h=950&fit=crop",
+        "alt": "White hydrangeas arranged in simple vessels for a baby shower table.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "03",
+      "name": "Anniversary",
+      "desc": "Intimate table settings and quiet grandeur for the years that deserve marking properly.",
+      "image": {
+        "src": "https://images.pexels.com/photos/21775093/pexels-photo-21775093.jpeg?auto=compress&cs=tinysrgb&w=760&h=950&fit=crop",
+        "alt": "A candlelit dinner table set for an intimate anniversary celebration.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "04",
+      "name": "Engagement",
+      "desc": "Ring ceremonies and roka mornings, designed for both families — and for every photograph.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=760&h=950&crop=entropy&q=80",
+        "alt": "Close detail of hands and rings during an engagement ceremony.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "05",
+      "name": "Wedding",
+      "desc": "Multi-day celebrations, mandaps, receptions — and every hand-off in between, held by one team.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=760&h=950&crop=entropy&q=80",
+        "alt": "Tall floral arrangements lining a wedding ceremony aisle.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "06",
+      "name": "Naming Ceremony",
+      "desc": "Rituals held with warmth and precision, so the family can stay present through every step.",
+      "image": {
+        "src": "https://images.pexels.com/photos/38697701/pexels-photo-38697701.jpeg?auto=compress&cs=tinysrgb&w=760&h=950&fit=crop",
+        "alt": "Traditional sweets arranged on brass for a naming ceremony.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "07",
+      "name": "Corporate Events",
+      "desc": "Launches, award nights and offsites with hospitality that quietly reflects the brand.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1524824267900-2fa9cbf7a506?auto=format&fit=crop&w=760&h=950&crop=entropy&q=80",
+        "alt": "A formal banquet room laid for a corporate dinner.",
+        "width": 760,
+        "height": 950
+      }
+    },
+    {
+      "num": "08",
+      "name": "Private Celebrations",
+      "desc": "House parties, homecomings and reunions — the evenings that don't need a reason.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=760&h=950&crop=entropy&q=80",
+        "alt": "Guests raising a toast under warm string lights at a private party.",
+        "width": 760,
+        "height": 950
+      }
+    }
+  ],
+  "categoriesHeading": {
+    "eyebrow": "What We Celebrate"
+  },
+  "story": {
+    "eyebrow": "The Studio",
+    "heading": "Every Celebration<br>Begins With an Idea.",
+    "paragraphs": [
+      "Atithya began with a simple observation — the families who enjoyed their own celebrations most were the ones who weren't managing them.",
+      "So we built a studio that takes the whole weight of an event: the concept, the drawings, the vendor contracts, the run sheet and the thousand small decisions nobody warns you about. What we hand back is the part that actually matters — a day you get to be present for.",
+      "We take on a limited number of events each season. That's deliberate. It means your florist is briefed by the same person who drew your floor plan, and that on the day itself, someone who knows your family by name is standing quietly at the door."
+    ],
+    "signature": "Atithya Events",
+    "stats": [
+      {
+        "value": "240+",
+        "label": "Celebrations designed"
+      },
+      {
+        "value": "9",
+        "label": "Years in practice"
+      },
+      {
+        "value": "40+",
+        "label": "Trusted partners"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&fit=crop&w=900&h=1125&crop=entropy&q=80",
+        "alt": "A bride holding a soft, loosely tied bouquet of cream and blush flowers.",
+        "srcset": "https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&fit=crop&w=700&h=875&crop=entropy&q=80 700w, https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&fit=crop&w=1100&h=1375&crop=entropy&q=80 1100w",
+        "sizes": "(min-width:900px) 44vw, 92vw",
+        "width": 900,
+        "height": 1125
+      },
+      {
+        "src": "https://images.pexels.com/photos/18897125/pexels-photo-18897125.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
+        "alt": "Hands holding a brass thali of ceremonial offerings.",
+        "width": 600,
+        "height": 600
+      }
+    ]
+  },
+  "header": {
+    "logo": null,
+    "navLinks": [
+      {
+        "href": "#top",
+        "label": "Home"
+      },
+      {
+        "href": "#events",
+        "label": "Events"
+      },
+      {
+        "href": "#work",
+        "label": "Our Work"
+      },
+      {
+        "href": "#about",
+        "label": "About"
+      },
+      {
+        "href": "#services",
+        "label": "Services"
+      },
+      {
+        "href": "#enquiry",
+        "label": "Contact"
+      }
+    ],
+    "cta": {
+      "href": "#enquiry",
+      "label": "Plan Your Event"
+    },
+    "drawerCtaLabel": "Plan Your Event",
+    "drawerWhatsappLabel": "Chat with us on WhatsApp"
+  },
+  "social": [
+    {
+      "platform": "instagram",
+      "url": "https://www.instagram.com/atithya_events_thane/"
+    },
+    {
+      "platform": "whatsapp",
+      "url": ""
+    }
+  ],
+  "featured": [
+    {
+      "flip": false,
+      "image": {
+        "src": "https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&cs=tinysrgb&w=1100&h=756&fit=crop",
+        "alt": "A floral mandap framed in drapes and cream roses, set for a wedding ceremony.",
+        "srcset": "https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&cs=tinysrgb&w=800&h=550&fit=crop 800w, https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&cs=tinysrgb&w=1400&h=963&fit=crop 1400w",
+        "sizes": "(min-width:900px) 62vw, 92vw",
+        "width": 1400,
+        "height": 963
+      },
+      "meta": [
+        "Wedding",
+        "Alibaug",
+        "2025"
+      ],
+      "title": "The Courtyard Wedding",
+      "body": "Three days, two families and a mandap built around a sixty-year-old rain tree. We designed the ceremony, ran guest logistics for 320 people, and delivered a reception that started twenty minutes early.",
+      "linkHref": "#enquiry",
+      "linkLabel": "Plan something similar"
+    },
+    {
+      "flip": true,
+      "image": {
+        "src": "https://images.pexels.com/photos/9816190/pexels-photo-9816190.jpeg?auto=compress&cs=tinysrgb&w=1100&h=756&fit=crop",
+        "alt": "A dessert table styled with lanterns, cake stands and soft neutral linen.",
+        "srcset": "https://images.pexels.com/photos/9816190/pexels-photo-9816190.jpeg?auto=compress&cs=tinysrgb&w=800&h=550&fit=crop 800w, https://images.pexels.com/photos/9816190/pexels-photo-9816190.jpeg?auto=compress&cs=tinysrgb&w=1400&h=963&fit=crop 1400w",
+        "sizes": "(min-width:900px) 62vw, 92vw",
+        "width": 1400,
+        "height": 963
+      },
+      "meta": [
+        "Baby Shower",
+        "Powai",
+        "2025"
+      ],
+      "title": "A Sky Full of Firsts",
+      "body": "A pastel afternoon for forty guests — a dessert table in blush and cloud white, a ceremony corner the grandmothers had specifically asked for, and seating that kept every generation talking.",
+      "linkHref": "#enquiry",
+      "linkLabel": "Plan something similar"
+    },
+    {
+      "flip": false,
+      "image": {
+        "src": "https://images.pexels.com/photos/37827340/pexels-photo-37827340.jpeg?auto=compress&cs=tinysrgb&w=1100&h=756&fit=crop",
+        "alt": "A dark private dining table laid with crystal glassware and folded linen.",
+        "srcset": "https://images.pexels.com/photos/37827340/pexels-photo-37827340.jpeg?auto=compress&cs=tinysrgb&w=800&h=550&fit=crop 800w, https://images.pexels.com/photos/37827340/pexels-photo-37827340.jpeg?auto=compress&cs=tinysrgb&w=1400&h=963&fit=crop 1400w",
+        "sizes": "(min-width:900px) 62vw, 92vw",
+        "width": 1400,
+        "height": 963
+      },
+      "meta": [
+        "Milestone Birthday",
+        "Bandra",
+        "2024"
+      ],
+      "title": "Sixty, Golden",
+      "body": "A seated dinner for eighty in a private room — brass, ivory linen and deliberately low florals, with a menu built entirely around the meals the guest of honour grew up eating.",
+      "linkHref": "#enquiry",
+      "linkLabel": "Plan something similar"
+    },
+    {
+      "flip": true,
+      "image": {
+        "src": "https://images.pexels.com/photos/17294727/pexels-photo-17294727.jpeg?auto=compress&cs=tinysrgb&w=1100&h=756&fit=crop",
+        "alt": "A candlelit reception room set with long tables and trailing greenery.",
+        "srcset": "https://images.pexels.com/photos/17294727/pexels-photo-17294727.jpeg?auto=compress&cs=tinysrgb&w=800&h=550&fit=crop 800w, https://images.pexels.com/photos/17294727/pexels-photo-17294727.jpeg?auto=compress&cs=tinysrgb&w=1400&h=963&fit=crop 1400w",
+        "sizes": "(min-width:900px) 62vw, 92vw",
+        "width": 1400,
+        "height": 963
+      },
+      "meta": [
+        "Corporate",
+        "Lower Parel",
+        "2025"
+      ],
+      "title": "Annual Partners' Night",
+      "body": "An awards evening for 250 — stage design, run-of-show, speaker cues and vendor management, held together until the last car pulled away at half past one.",
+      "linkHref": "#enquiry",
+      "linkLabel": "Plan something similar"
+    }
+  ],
+  "services": [
+    {
+      "num": "01",
+      "title": "Event Concept & Planning",
+      "body": "We start with the guest list, the budget and the feeling you're after — then build the concept, the timeline and the cost sheet that everything else is measured against."
+    },
+    {
+      "num": "02",
+      "title": "Décor & Styling",
+      "body": "Palette, florals, linen, lighting, signage and tabletop — drawn to scale and sampled in advance, so what arrives on the day is what you approved."
+    },
+    {
+      "num": "03",
+      "title": "Venue Setup",
+      "body": "Floor plans, guest flow, stage and seating, power and access. We walk the venue early and solve the awkward corners before they become the day's problem."
+    },
+    {
+      "num": "04",
+      "title": "Vendor Coordination",
+      "body": "Catering, photography, sound, entertainment, transport. We brief them, negotiate them, chase them and keep a single schedule that everyone works from."
+    },
+    {
+      "num": "05",
+      "title": "Event-Day Management",
+      "body": "A dedicated coordinator and crew on site from load-in to load-out, holding the run sheet so no one in your family has to answer a single vendor call."
+    },
+    {
+      "num": "06",
+      "title": "Custom Experiences",
+      "body": "The details people remember — a live counter, a surprise entry, a hand-drawn menu, a ritual reimagined for a room your grandmother would still recognise."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Concept",
+      "body": "We meet, we listen, and we come back with a direction — a palette, a mood and a shape for the day."
+    },
+    {
+      "title": "Planning",
+      "body": "Budget, venue, guest count and calendar are locked. You get one document that holds every decision."
+    },
+    {
+      "title": "Design",
+      "body": "Layouts drawn to scale, florals sampled, linen and lighting chosen. Nothing is left to be imagined."
+    },
+    {
+      "title": "Coordination",
+      "body": "Vendors briefed and contracted, deliveries sequenced, a run sheet circulated to everyone involved."
+    },
+    {
+      "title": "Execution",
+      "body": "Our crew arrives before anyone else and leaves after everyone else. You simply attend your own celebration."
+    }
+  ],
+  "portfolio": [
+    {
+      "category": "wedding",
+      "image": {
+        "src": "https://images.pexels.com/photos/29040997/pexels-photo-29040997.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        "alt": "Round banquet tables in ivory linen with tall floral centrepieces.",
+        "width": 800,
+        "height": 600
+      },
+      "title": "Lakeside Vows",
+      "subtitle": "Wedding · Khandala"
+    },
+    {
+      "category": "birthday",
+      "image": {
+        "src": "https://images.pexels.com/photos/11712500/pexels-photo-11712500.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067&fit=crop",
+        "alt": "A tiered celebration cake lit by warm string lights.",
+        "width": 800,
+        "height": 1067
+      },
+      "title": "Forty, Quietly",
+      "subtitle": "Birthday · Powai"
+    },
+    {
+      "category": "engagement",
+      "image": {
+        "src": "https://images.pexels.com/photos/31046060/pexels-photo-31046060.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+        "alt": "A loosely gathered bouquet of white blooms held against a pale dress.",
+        "width": 800,
+        "height": 1000
+      },
+      "title": "The Roka Morning",
+      "subtitle": "Engagement · Thane"
+    },
+    {
+      "category": "wedding",
+      "image": {
+        "src": "https://images.pexels.com/photos/33417236/pexels-photo-33417236.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+        "alt": "A garden gateway dressed in marigold and drapes leading to a ceremony lawn.",
+        "width": 800,
+        "height": 1000
+      },
+      "title": "Garden Entrance",
+      "subtitle": "Wedding · Nashik"
+    },
+    {
+      "category": "anniversary",
+      "image": {
+        "src": "https://images.pexels.com/photos/28678990/pexels-photo-28678990.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        "alt": "A chandelier lighting the archway into a formal reception hall.",
+        "width": 800,
+        "height": 600
+      },
+      "title": "Twenty-Five Years",
+      "subtitle": "Anniversary · Bandra"
+    },
+    {
+      "category": "baby",
+      "image": {
+        "src": "https://images.pexels.com/photos/5420705/pexels-photo-5420705.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop",
+        "alt": "A pastel dessert display of macarons and small cakes on a styled table.",
+        "width": 800,
+        "height": 800
+      },
+      "title": "Almost Here",
+      "subtitle": "Baby Shower · Andheri"
+    },
+    {
+      "category": "wedding",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&h=533&crop=entropy&q=80",
+        "alt": "Two ceremony chairs framed by floral arrangements on a lawn.",
+        "width": 800,
+        "height": 533
+      },
+      "title": "Two Chairs, One Lawn",
+      "subtitle": "Wedding · Alibaug"
+    },
+    {
+      "category": "corporate",
+      "image": {
+        "src": "https://images.pexels.com/photos/4717558/pexels-photo-4717558.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+        "alt": "A ballroom of round tables set with gilded chairs for a formal dinner.",
+        "width": 800,
+        "height": 1000
+      },
+      "title": "The Awards Floor",
+      "subtitle": "Corporate · Lower Parel"
+    },
+    {
+      "category": "birthday",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=800&h=800&crop=entropy&q=80",
+        "alt": "A long dining table dressed for a celebration dinner.",
+        "width": 800,
+        "height": 800
+      },
+      "title": "The Long Table",
+      "subtitle": "Birthday · Juhu"
+    },
+    {
+      "category": "baby",
+      "image": {
+        "src": "https://images.pexels.com/photos/32476124/pexels-photo-32476124.jpeg?auto=compress&cs=tinysrgb&w=800&h=1067&fit=crop",
+        "alt": "White hydrangea arrangements lining a petal-strewn aisle.",
+        "width": 800,
+        "height": 1067
+      },
+      "title": "Sugar & Cloud",
+      "subtitle": "Baby Shower · Powai"
+    },
+    {
+      "category": "engagement",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&h=600&crop=entropy&q=80",
+        "alt": "Glasses raised in a toast at a celebration table.",
+        "width": 800,
+        "height": 600
+      },
+      "title": "To the Two of You",
+      "subtitle": "Engagement · Worli"
+    },
+    {
+      "category": "anniversary",
+      "image": {
+        "src": "https://images.pexels.com/photos/16120248/pexels-photo-16120248.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+        "alt": "A round dinner table dressed in gold with a deep floral centrepiece.",
+        "width": 800,
+        "height": 1000
+      },
+      "title": "A Private Dinner",
+      "subtitle": "Anniversary · Colaba"
+    },
+    {
+      "category": "wedding",
+      "image": {
+        "src": "https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop",
+        "alt": "A tall hydrangea centrepiece on a formally laid banquet table.",
+        "width": 800,
+        "height": 533
+      },
+      "title": "White on White",
+      "subtitle": "Wedding · Thane"
+    },
+    {
+      "category": "corporate",
+      "image": {
+        "src": "https://images.pexels.com/photos/18823960/pexels-photo-18823960.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        "alt": "Outdoor dining tables set against a wall of greenery.",
+        "width": 800,
+        "height": 600
+      },
+      "title": "Partners' Offsite",
+      "subtitle": "Corporate · Lonavala"
+    },
+    {
+      "category": "birthday",
+      "image": {
+        "src": "https://images.pexels.com/photos/19717706/pexels-photo-19717706.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop",
+        "alt": "Tiered stands of small desserts arranged on a marble table.",
+        "width": 800,
+        "height": 1000
+      },
+      "title": "The Dessert Hour",
+      "subtitle": "Birthday · Bandra"
+    }
+  ],
+  "portfolioFilters": [
+    {
+      "value": "all",
+      "label": "All"
+    },
+    {
+      "value": "wedding",
+      "label": "Weddings"
+    },
+    {
+      "value": "birthday",
+      "label": "Birthdays"
+    },
+    {
+      "value": "baby",
+      "label": "Baby Showers"
+    },
+    {
+      "value": "engagement",
+      "label": "Engagements"
+    },
+    {
+      "value": "anniversary",
+      "label": "Anniversaries"
+    },
+    {
+      "value": "corporate",
+      "label": "Corporate"
+    }
+  ],
+  "why": [
+    {
+      "num": "01",
+      "title": "Personalised Concepts",
+      "body": "No packages, no repeated set-ups. Every event is drawn for the people it belongs to."
+    },
+    {
+      "num": "02",
+      "title": "End-to-End Management",
+      "body": "One studio from first call to load-out. Nothing falls between two vendors."
+    },
+    {
+      "num": "03",
+      "title": "Creative Styling",
+      "body": "Considered palettes, real florals and lighting that flatters both the room and the photographs."
+    },
+    {
+      "num": "04",
+      "title": "Professional Coordination",
+      "body": "Contracts, timelines and briefings handled in writing — so the day runs on a plan, not on hope."
+    },
+    {
+      "num": "05",
+      "title": "Attention to Detail",
+      "body": "Napkin folds, cable runs, the height of a centrepiece. The small things are the whole thing."
+    },
+    {
+      "num": "06",
+      "title": "A Stress-Free Day",
+      "body": "Your phone stays in your pocket. Vendors call us, and we solve it before you hear about it."
+    }
+  ],
+  "process": [
+    {
+      "num": "01",
+      "title": "Tell Us Your Vision",
+      "body": "Share the occasion, the date, the guest count and the budget you're working with. A short call is usually enough."
+    },
+    {
+      "num": "02",
+      "title": "We Design the Experience",
+      "body": "You receive a concept, a layout and a transparent cost sheet — with options, not pressure."
+    },
+    {
+      "num": "03",
+      "title": "We Plan & Coordinate",
+      "body": "Vendors are booked and briefed, deliveries sequenced, and a single run sheet goes out to everyone."
+    },
+    {
+      "num": "04",
+      "title": "You Celebrate",
+      "body": "Our crew runs the day end to end. You arrive as a guest at your own celebration."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "We'd resigned ourselves to running our own daughter's wedding. Atithya took the whole thing — three functions, 320 guests — and the only thing I did on the day was cry at the right moment.",
+      "name": "Anita & Rajesh Deshpande",
+      "event": "Wedding · Alibaug"
+    },
+    {
+      "quote": "I sent them one photograph and a colour I liked. What arrived was better than anything I'd pictured, and my mother-in-law still talks about the dessert table.",
+      "name": "Sneha Kulkarni",
+      "event": "Baby Shower · Powai"
+    },
+    {
+      "quote": "We host an awards night every year and it has never run this cleanly. Their coordinator knew the schedule better than our own team did.",
+      "name": "Farhan Qureshi",
+      "event": "Corporate Awards Night · Lower Parel"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What types of events do you manage?",
+      "answer": "Weddings and all their attendant functions, engagements and roka ceremonies, birthdays from first to eightieth, baby showers, naming ceremonies, anniversaries, house parties and corporate evenings — launches, award nights and offsites. If it involves guests, a room and a timeline, it's within our range."
+    },
+    {
+      "question": "How far in advance should I book?",
+      "answer": "For weddings, six to nine months gives us the best choice of venues and vendors. For birthdays, showers and private dinners, ten to fourteen weeks is comfortable. We do take shorter timelines when the calendar allows — ask, and we'll tell you honestly whether we can do it well."
+    },
+    {
+      "question": "Do you provide décor and styling?",
+      "answer": "Yes — it's the heart of what we do. Concept, palette, florals, linen, lighting, signage, stage and tabletop are all designed in-house and produced with partners we've worked with for years. You'll see layouts and samples before anything is ordered."
+    },
+    {
+      "question": "Can you work with our preferred venue?",
+      "answer": "Absolutely. We're happy to work in a venue you've already chosen — hotel, farmhouse, banquet hall, clubhouse or your own home. We'll do a site visit early, confirm what the venue allows, and design within those constraints. If you haven't chosen yet, we'll shortlist options that suit your guest count and budget."
+    },
+    {
+      "question": "Can you work within a specific budget?",
+      "answer": "Yes, and we'd rather you tell us the real number at the start. We plan within it and show you where every rupee is going in a written cost sheet. Where the budget is tight, we'll tell you which two or three elements will carry the room and where it's safe to spend less."
+    },
+    {
+      "question": "Do you manage vendors and event-day coordination?",
+      "answer": "We do. Catering, photography, sound, lighting, entertainment, transport and staffing are briefed, contracted and scheduled by us. On the day, a dedicated coordinator and crew are on site from load-in to load-out, working from a single run sheet — so no one in your family fields a vendor call."
+    }
+  ],
+  "cta": {
+    "image": {
+      "src": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1400&h=933&crop=entropy&q=80",
+      "alt": "Guests showering a couple with confetti as they leave their celebration.",
+      "srcset": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&h=600&crop=entropy&q=80 900w, https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1800&h=1200&crop=entropy&q=80 1800w",
+      "sizes": "100vw",
+      "width": 1800,
+      "height": 1200
+    },
+    "eyebrow": "Now booking for the coming season",
+    "heading": "Let's make your next celebration unforgettable.",
+    "body": "Tell us what you're planning and let's create something beautiful together.",
+    "buttons": [
+      {
+        "style": "light",
+        "href": "#enquiry",
+        "whatsapp": false,
+        "label": "Plan Your Event"
+      },
+      {
+        "style": "onDark",
+        "href": "#",
+        "whatsapp": true,
+        "label": "Chat on WhatsApp"
+      }
+    ]
+  },
+  "footer": {
+    "word": "Atithya",
+    "blurb": "A boutique events studio designing and managing weddings, birthdays, showers and corporate celebrations across {{CITY}} — concept to final toast.",
+    "columns": [
+      {
+        "heading": "Events",
+        "links": [
+          {
+            "href": "#events",
+            "label": "Weddings"
+          },
+          {
+            "href": "#events",
+            "label": "Birthdays"
+          },
+          {
+            "href": "#events",
+            "label": "Baby Showers"
+          },
+          {
+            "href": "#events",
+            "label": "Engagements"
+          },
+          {
+            "href": "#events",
+            "label": "Naming Ceremonies"
+          },
+          {
+            "href": "#events",
+            "label": "Corporate Events"
+          }
+        ]
+      },
+      {
+        "heading": "Studio",
+        "links": [
+          {
+            "href": "#about",
+            "label": "About"
+          },
+          {
+            "href": "#services",
+            "label": "Services"
+          },
+          {
+            "href": "#work",
+            "label": "Our Work"
+          },
+          {
+            "href": "#enquiry",
+            "label": "Contact"
+          }
+        ]
+      },
+      {
+        "heading": "Get in touch",
+        "links": []
+      }
+    ],
+    "legal": "Atithya Events Thane. All rights reserved.",
+    "credit": "Designed & built with care.",
+    "logo": null,
+    "contactHeading": "Get in touch",
+    "ctaLabel": "Chat on WhatsApp"
+  }
+}

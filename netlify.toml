@@ -1,0 +1,21 @@
+# Netlify deploy configuration.
+# Set SANITY_PROJECT_ID (and SANITY_DATASET if not "production") under
+# Site settings → Environment variables. Without them the build falls back to
+# content/fallback.json, so a misconfigured deploy still produces a working site.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

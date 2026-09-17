@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ==========================================================================
+     ATITHYA EVENTS THANE
+     Static marketing site. No build step, no dependencies, no framework.
+
+     ─────────────────────────────────────────────────────────────────────────
+     WHERE THINGS LIVE
+       index.html            this file — page structure and copy
+       assets/css/*.css      styles, loaded in numeric order (order matters)
+       assets/js/site.config.js   phone / email / WhatsApp — edit this first
+       assets/js/main.js     behaviour
+       assets/images/        your own photography (see assets/images/README.md)
+       README.md             full project guide
+
+     To change contact details you do NOT need to touch this file — edit
+     assets/js/site.config.js instead. Elements marked [data-site] and
+     [data-href] are filled in from there at load time.
+
+     Images are plain Unsplash / Pexels URLs. Swap the src and srcset to use
+     your own photography; nothing else depends on them.
+     ────────────────────────────────────────────────────────────────────────── -->
+
+<title>Atithya Events Thane | Wedding, Birthday &amp; Celebration Planners</title>
+<meta name="description" content="Atithya Events Thane is a boutique events studio that designs and manages weddings, birthdays, baby showers, anniversaries, engagements and corporate celebrations — from first concept to the final toast.">
+<meta name="theme-color" content="#FBF8F3">
+<link rel="canonical" href="https://example.com/">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Atithya Events Thane">
+<meta property="og:title" content="Atithya Events Thane — We Create Moments Worth Celebrating">
+<meta property="og:description" content="Thoughtfully planned celebrations, beautifully designed and flawlessly executed.">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=630&amp;fit=crop">
+<meta property="og:image:alt" content="A candlelit celebration table dressed with linen and seasonal flowers.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316130F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23FBF8F3' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..500&amp;family=Jost:ital,wght@0,300..600;1,400&amp;display=swap">
+
+<!-- Stylesheets — keep this order, the cascade depends on it -->
+<link rel="stylesheet" href="assets/css/01-tokens.css">
+<link rel="stylesheet" href="assets/css/02-base.css">
+<link rel="stylesheet" href="assets/css/03-components.css">
+<link rel="stylesheet" href="assets/css/04-sections.css">
+<link rel="stylesheet" href="assets/css/05-utilities.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================ NAVIGATION ============================ -->
+<header class="nav" id="nav" data-nav>
+  <div class="nav__in">
+    <a class="brand" href="#top" aria-label="Atithya Events Thane — home">
+      <span class="brand__mark">Atithya</span>
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__sub">Events&nbsp;Thane</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="#top">Home</a>
+      <a class="nav__link" href="#events">Events</a>
+      <a class="nav__link" href="#work">Our Work</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#services">Services</a>
+      <a class="nav__link" href="#enquiry">Contact</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:.4rem">
+      <a class="btn btn--onDark nav__cta" href="#enquiry">Plan Your Event</a>
+      <button class="burger" type="button" data-menu-toggle aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span>
+        <span class="vh">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="drawer" id="drawer" data-drawer data-open="false" aria-label="Site menu">
+  <nav class="drawer__links" aria-label="Mobile">
+    <a class="drawer__link" href="#top" style="--i:0"><span>01</span> Home</a>
+    <a class="drawer__link" href="#events" style="--i:1"><span>02</span> Events</a>
+    <a class="drawer__link" href="#work" style="--i:2"><span>03</span> Our Work</a>
+    <a class="drawer__link" href="#about" style="--i:3"><span>04</span> About</a>
+    <a class="drawer__link" href="#services" style="--i:4"><span>05</span> Services</a>
+    <a class="drawer__link" href="#enquiry" style="--i:5"><span>06</span> Contact</a>
+  </nav>
+  <div class="drawer__foot">
+    <div class="drawer__meta">
+      <a href="tel:+919137172872" data-href="tel"><span data-site="phone">+91 91371 72872</span></a>
+      <a href="mailto:hello@atithyaevents.in" data-href="mail"><span data-site="email">hello@atithyaevents.in</span></a>
+      <span class="muted small" data-site="city">Thane &amp; Mumbai</span>
+    </div>
+    <a class="btn btn--wide" href="#enquiry">Plan Your Event</a>
+    <a class="btn btn--ghost btn--wide" href="#" data-wa-direct>Chat with us on WhatsApp</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ================================ HERO ================================ -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img src="https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" srcset="https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w, https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1800 1800w, https://images.pexels.com/photos/8452759/pexels-photo-8452759.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=2400 2400w"
+         sizes="100vw" alt="A long celebration table dressed in linen, dried florals and candlelight before the guests arrive."
+         fetchpriority="high" decoding="async" width="2400" height="1600">
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="hero__in">
+    <div class="shell">
+      <p class="eyebrow hero__eyebrow">Events Studio <span aria-hidden="true">·</span> <span data-site="city">Thane &amp; Mumbai</span></p>
+
+      <h1 class="d1">
+        <span class="line-mask" style="--i:0"><span>We Create Moments</span></span>
+        <span class="line-mask" style="--i:1"><span>Worth <em class="italic">Celebrating.</em></span></span>
+      </h1>
+
+      <p class="hero__copy" data-reveal style="--i:3">
+        Thoughtfully planned celebrations, beautifully designed and flawlessly executed.
+      </p>
+
+      <div class="btn-row hero__actions" data-reveal style="--i:4">
+        <a class="btn btn--light" href="#enquiry">Plan Your Event</a>
+        <a class="btn btn--onDark" href="#work">Explore Our Work</a>
+      </div>
+
+      <div class="hero__foot" data-reveal style="--i:5">
+        <div class="hero__tags">
+          <span>Weddings</span><span>Birthdays</span><span>Baby Showers</span><span>Corporate</span>
+        </div>
+        <span class="hero__scroll"><i aria-hidden="true"></i> Scroll</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== EVENT CATEGORIES ========================== -->
+<section class="section" id="events" aria-labelledby="events-h">
+  <div class="shell">
+    <div class="sec-head sec-head--split">
+      <p class="eyebrow" data-reveal><span class="eyebrow__num">01</span> What We Celebrate</p>
+      <h2 class="d2" id="events-h" data-reveal style="--i:1">Eight kinds of joy,<br>one standard of care.</h2>
+      <p class="lede" data-reveal style="--i:2">
+        A first birthday and a three-day wedding are planned the same way here — we listen closely,
+        design with intent, and hold every detail until the last guest has left.
+      </p>
+    </div>
+
+    <div class="cats__grid">
+      <!-- Desktop image stage (hidden on small screens) -->
+      <div class="cat-stage" aria-hidden="true">
+        <div class="cat-stage__box" data-stage>
+          <img class="is-on" data-stage-img="0" src="https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="1" src="https://images.pexels.com/photos/32476128/pexels-photo-32476128.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=950&amp;fit=crop" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="2" src="https://images.pexels.com/photos/21775093/pexels-photo-21775093.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=950&amp;fit=crop" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="3" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="4" src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="5" src="https://images.pexels.com/photos/38697701/pexels-photo-38697701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=950&amp;fit=crop" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="6" src="https://images.unsplash.com/photo-1524824267900-2fa9cbf7a506?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="" loading="lazy" decoding="async">
+          <img data-stage-img="7" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="" loading="lazy" decoding="async">
+        </div>
+        <p class="cat-stage__cap"><b data-stage-name>Birthday</b> <span data-stage-count>01 / 08</span></p>
+      </div>
+
+      <!-- The index -->
+      <ul class="cats__list" data-cats>
+        <li class="cat" data-reveal style="--i:0">
+          <a class="cat__link" href="#enquiry" data-cat="0">
+            <span class="cat__thumb"><img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="A dessert and cake table styled against exposed brick for a birthday dinner." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">01</span>
+              <span>
+                <span class="cat__name">Birthday</span>
+                <span class="cat__desc">Milestone dinners, first birthdays and grown-up parties styled around the person — never a theme pack.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:1">
+          <a class="cat__link" href="#enquiry" data-cat="1">
+            <span class="cat__thumb"><img src="https://images.pexels.com/photos/32476128/pexels-photo-32476128.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=950&amp;fit=crop" alt="White hydrangeas arranged in simple vessels for a baby shower table." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">02</span>
+              <span>
+                <span class="cat__name">Baby Shower</span>
+                <span class="cat__desc">Soft palettes, thoughtful details and a room calm enough for the mother-to-be to actually enjoy.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:2">
+          <a class="cat__link" href="#enquiry" data-cat="2">
+            <span class="cat__thumb"><img src="https://images.pexels.com/photos/21775093/pexels-photo-21775093.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=950&amp;fit=crop" alt="A candlelit dinner table set for an intimate anniversary celebration." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">03</span>
+              <span>
+                <span class="cat__name">Anniversary</span>
+                <span class="cat__desc">Intimate table settings and quiet grandeur for the years that deserve marking properly.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:3">
+          <a class="cat__link" href="#enquiry" data-cat="3">
+            <span class="cat__thumb"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="Close detail of hands and rings during an engagement ceremony." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">04</span>
+              <span>
+                <span class="cat__name">Engagement</span>
+                <span class="cat__desc">Ring ceremonies and roka mornings, designed for both families — and for every photograph.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:4">
+          <a class="cat__link" href="#enquiry" data-cat="4">
+            <span class="cat__thumb"><img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="Tall floral arrangements lining a wedding ceremony aisle." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">05</span>
+              <span>
+                <span class="cat__name">Wedding</span>
+                <span class="cat__desc">Multi-day celebrations, mandaps, receptions — and every hand-off in between, held by one team.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:5">
+          <a class="cat__link" href="#enquiry" data-cat="5">
+            <span class="cat__thumb"><img src="https://images.pexels.com/photos/38697701/pexels-photo-38697701.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=760&amp;h=950&amp;fit=crop" alt="Traditional sweets arranged on brass for a naming ceremony." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">06</span>
+              <span>
+                <span class="cat__name">Naming Ceremony</span>
+                <span class="cat__desc">Rituals held with warmth and precision, so the family can stay present through every step.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:6">
+          <a class="cat__link" href="#enquiry" data-cat="6">
+            <span class="cat__thumb"><img src="https://images.unsplash.com/photo-1524824267900-2fa9cbf7a506?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="A formal banquet room laid for a corporate dinner." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">07</span>
+              <span>
+                <span class="cat__name">Corporate Events</span>
+                <span class="cat__desc">Launches, award nights and offsites with hospitality that quietly reflects the brand.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+        <li class="cat" data-reveal style="--i:7">
+          <a class="cat__link" href="#enquiry" data-cat="7">
+            <span class="cat__thumb"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&amp;fit=crop&amp;w=760&amp;h=950&amp;crop=entropy&amp;q=80" alt="Guests raising a toast under warm string lights at a private party." loading="lazy" decoding="async" width="760" height="950"></span>
+            <span class="cat__body">
+              <span class="cat__num">08</span>
+              <span>
+                <span class="cat__name">Private Celebrations</span>
+                <span class="cat__desc">House parties, homecomings and reunions — the evenings that don't need a reason.</span>
+              </span>
+              <svg class="cat__arrow" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" stroke="currentColor" stroke-width="1"/></svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== BRAND STORY =========================== -->
+<section class="section" id="about" aria-labelledby="about-h">
+  <div class="shell">
+    <div class="story__grid">
+      <div class="story__media" data-reveal>
+        <div class="frame frame--portrait">
+          <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&amp;fit=crop&amp;w=900&amp;h=1125&amp;crop=entropy&amp;q=80" srcset="https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&amp;fit=crop&amp;w=700&amp;h=875&amp;crop=entropy&amp;q=80 700w, https://images.unsplash.com/photo-1550005809-91ad75fb315f?auto=format&amp;fit=crop&amp;w=1100&amp;h=1375&amp;crop=entropy&amp;q=80 1100w" sizes="(min-width:900px) 44vw, 92vw"
+               alt="A bride holding a soft, loosely tied bouquet of cream and blush flowers." loading="lazy" decoding="async" width="900" height="1125">
+        </div>
+        <div class="story__inset">
+          <div class="frame frame--square">
+            <img src="https://images.pexels.com/photos/18897125/pexels-photo-18897125.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600&amp;h=600&amp;fit=crop" alt="Hands holding a brass thali of ceremonial offerings." loading="lazy" decoding="async" width="600" height="600">
+          </div>
+        </div>
+      </div>
+
+      <div class="story__body">
+        <p class="eyebrow" data-reveal><span class="eyebrow__num">02</span> The Studio</p>
+        <h2 class="d2" id="about-h" data-reveal style="--i:1">Every Celebration<br>Begins With an Idea.</h2>
+        <p class="lede" data-reveal style="--i:2">
+          Atithya began with a simple observation — the families who enjoyed their own celebrations most
+          were the ones who weren't managing them.
+        </p>
+        <p data-reveal style="--i:3">
+          So we built a studio that takes the whole weight of an event: the concept, the drawings, the vendor
+          contracts, the run sheet and the thousand small decisions nobody warns you about. What we hand back
+          is the part that actually matters — a day you get to be present for.
+        </p>
+        <p data-reveal style="--i:4">
+          We take on a limited number of events each season. That's deliberate. It means your florist is briefed
+          by the same person who drew your floor plan, and that on the day itself, someone who knows your family
+          by name is standing quietly at the door.
+        </p>
+        <p class="story__sig" data-reveal style="--i:5">Atithya Events, <span data-site="city">Thane</span></p>
+
+        <dl class="stats" data-reveal style="--i:6">
+          <div><dt class="stat__n">240<span aria-hidden="true">+</span></dt><dd class="stat__l">Celebrations designed</dd></div>
+          <div><dt class="stat__n">9</dt><dd class="stat__l">Years in practice</dd></div>
+          <div><dt class="stat__n">40<span aria-hidden="true">+</span></dt><dd class="stat__l">Trusted partners</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== FEATURED EVENTS ========================== -->
+<section class="section section--paper" aria-labelledby="feat-h">
+  <div class="shell">
+    <div class="sec-head sec-head--split">
+      <p class="eyebrow" data-reveal><span class="eyebrow__num">03</span> Selected Work</p>
+      <h2 class="d2" id="feat-h" data-reveal style="--i:1">Celebrations we've<br>brought to life.</h2>
+      <p class="lede" data-reveal style="--i:2">
+        Four evenings from the last two seasons — different budgets, different families,
+        the same obsessive attention to how a room feels when people walk in.
+      </p>
+    </div>
+
+    <div class="feat">
+      <article class="feat__item zoom" data-reveal>
+        <div class="feat__media"><div class="frame frame--wide">
+          <img src="https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100&amp;h=756&amp;fit=crop" srcset="https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=550&amp;fit=crop 800w, https://images.pexels.com/photos/13156145/pexels-photo-13156145.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400&amp;h=963&amp;fit=crop 1400w" sizes="(min-width:900px) 62vw, 92vw"
+               alt="A floral mandap framed in drapes and cream roses, set for a wedding ceremony." loading="lazy" decoding="async" width="1400" height="963">
+        </div></div>
+        <div class="feat__panel">
+          <p class="feat__meta"><span>Wedding</span><span>Alibaug</span><span>2025</span></p>
+          <h3 class="d3">The Courtyard Wedding</h3>
+          <p>Three days, two families and a mandap built around a sixty-year-old rain tree. We designed the
+             ceremony, ran guest logistics for 320 people, and delivered a reception that started twenty minutes early.</p>
+          <a class="link-u" href="#enquiry">Plan something similar <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="feat__item feat__item--flip zoom" data-reveal>
+        <div class="feat__media"><div class="frame frame--wide">
+          <img src="https://images.pexels.com/photos/9816190/pexels-photo-9816190.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100&amp;h=756&amp;fit=crop" srcset="https://images.pexels.com/photos/9816190/pexels-photo-9816190.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=550&amp;fit=crop 800w, https://images.pexels.com/photos/9816190/pexels-photo-9816190.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400&amp;h=963&amp;fit=crop 1400w" sizes="(min-width:900px) 62vw, 92vw"
+               alt="A dessert table styled with lanterns, cake stands and soft neutral linen." loading="lazy" decoding="async" width="1400" height="963">
+        </div></div>
+        <div class="feat__panel">
+          <p class="feat__meta"><span>Baby Shower</span><span>Powai</span><span>2025</span></p>
+          <h3 class="d3">A Sky Full of Firsts</h3>
+          <p>A pastel afternoon for forty guests — a dessert table in blush and cloud white, a ceremony corner
+             the grandmothers had specifically asked for, and seating that kept every generation talking.</p>
+          <a class="link-u" href="#enquiry">Plan something similar <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="feat__item zoom" data-reveal>
+        <div class="feat__media"><div class="frame frame--wide">
+          <img src="https://images.pexels.com/photos/37827340/pexels-photo-37827340.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100&amp;h=756&amp;fit=crop" srcset="https://images.pexels.com/photos/37827340/pexels-photo-37827340.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=550&amp;fit=crop 800w, https://images.pexels.com/photos/37827340/pexels-photo-37827340.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400&amp;h=963&amp;fit=crop 1400w" sizes="(min-width:900px) 62vw, 92vw"
+               alt="A dark private dining table laid with crystal glassware and folded linen." loading="lazy" decoding="async" width="1400" height="963">
+        </div></div>
+        <div class="feat__panel">
+          <p class="feat__meta"><span>Milestone Birthday</span><span>Bandra</span><span>2024</span></p>
+          <h3 class="d3">Sixty, Golden</h3>
+          <p>A seated dinner for eighty in a private room — brass, ivory linen and deliberately low florals,
+             with a menu built entirely around the meals the guest of honour grew up eating.</p>
+          <a class="link-u" href="#enquiry">Plan something similar <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="feat__item feat__item--flip zoom" data-reveal>
+        <div class="feat__media"><div class="frame frame--wide">
+          <img src="https://images.pexels.com/photos/17294727/pexels-photo-17294727.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1100&amp;h=756&amp;fit=crop" srcset="https://images.pexels.com/photos/17294727/pexels-photo-17294727.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=550&amp;fit=crop 800w, https://images.pexels.com/photos/17294727/pexels-photo-17294727.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400&amp;h=963&amp;fit=crop 1400w" sizes="(min-width:900px) 62vw, 92vw"
+               alt="A candlelit reception room set with long tables and trailing greenery." loading="lazy" decoding="async" width="1400" height="963">
+        </div></div>
+        <div class="feat__panel">
+          <p class="feat__meta"><span>Corporate</span><span>Lower Parel</span><span>2025</span></p>
+          <h3 class="d3">Annual Partners' Night</h3>
+          <p>An awards evening for 250 — stage design, run-of-show, speaker cues and vendor management,
+             held together until the last car pulled away at half past one.</p>
+          <a class="link-u" href="#enquiry">Plan something similar <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SERVICES ============================= -->
+<section class="section" id="services" aria-labelledby="svc-h">
+  <div class="shell">
+    <div class="svc__grid">
+      <div class="svc__aside">
+        <p class="eyebrow" data-reveal><span class="eyebrow__num">04</span> Services</p>
+        <h2 class="d2" id="svc-h" data-reveal style="--i:1">What we take<br>off your hands.</h2>
+        <p data-reveal style="--i:2">Engage us for the whole event, or for the single piece that's keeping you awake.</p>
+        <div class="frame" data-reveal style="--i:3">
+          <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&amp;fit=crop&amp;w=800&amp;h=960&amp;crop=entropy&amp;q=80" alt="A generous arrangement of garden roses and foliage on a side table." loading="lazy" decoding="async" width="800" height="960">
+        </div>
+      </div>
+
+      <ol class="svc__list">
+        <li class="svc__item" data-reveal>
+          <span class="svc__n">01</span>
+          <div>
+            <h3>Event Concept &amp; Planning</h3>
+            <p>We start with the guest list, the budget and the feeling you're after — then build the concept,
+               the timeline and the cost sheet that everything else is measured against.</p>
+          </div>
+        </li>
+        <li class="svc__item" data-reveal style="--i:1">
+          <span class="svc__n">02</span>
+          <div>
+            <h3>Décor &amp; Styling</h3>
+            <p>Palette, florals, linen, lighting, signage and tabletop — drawn to scale and sampled in advance,
+               so what arrives on the day is what you approved.</p>
+          </div>
+        </li>
+        <li class="svc__item" data-reveal style="--i:2">
+          <span class="svc__n">03</span>
+          <div>
+            <h3>Venue Setup</h3>
+            <p>Floor plans, guest flow, stage and seating, power and access. We walk the venue early and solve
+               the awkward corners before they become the day's problem.</p>
+          </div>
+        </li>
+        <li class="svc__item" data-reveal style="--i:3">
+          <span class="svc__n">04</span>
+          <div>
+            <h3>Vendor Coordination</h3>
+            <p>Catering, photography, sound, entertainment, transport. We brief them, negotiate them, chase them
+               and keep a single schedule that everyone works from.</p>
+          </div>
+        </li>
+        <li class="svc__item" data-reveal style="--i:4">
+          <span class="svc__n">05</span>
+          <div>
+            <h3>Event-Day Management</h3>
+            <p>A dedicated coordinator and crew on site from load-in to load-out, holding the run sheet so no
+               one in your family has to answer a single vendor call.</p>
+          </div>
+        </li>
+        <li class="svc__item" data-reveal style="--i:5">
+          <span class="svc__n">06</span>
+          <div>
+            <h3>Custom Experiences</h3>
+            <p>The details people remember — a live counter, a surprise entry, a hand-drawn menu, a ritual
+               reimagined for a room your grandmother would still recognise.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SIGNATURE EXPERIENCE ======================= -->
+<section class="section section--ink exp" aria-labelledby="exp-h">
+  <div class="shell">
+    <div class="exp__grid">
+      <div class="exp__media" data-reveal>
+        <div class="frame frame--portrait">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=900&amp;h=1125&amp;crop=entropy&amp;q=80" srcset="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=700&amp;h=875&amp;crop=entropy&amp;q=80 700w, https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=1100&amp;h=1375&amp;crop=entropy&amp;q=80 1100w" sizes="(min-width:960px) 44vw, 92vw"
+               alt="Soft evening light falling across a bride holding her bouquet before the ceremony." loading="lazy" decoding="async" width="900" height="1125">
+        </div>
+        <p class="exp__badge">Typical lead time <b>10&ndash;14 weeks</b></p>
+      </div>
+
+      <div>
+        <p class="eyebrow" data-reveal><span class="eyebrow__num">05</span> The Experience</p>
+        <h2 class="d2" id="exp-h" data-reveal style="--i:1">From the first idea to<br>the final celebration.</h2>
+        <p class="lede" data-reveal style="--i:2">
+          One team, one thread, five stages. You'll never be asked to explain your event twice.
+        </p>
+
+        <ol class="exp__steps" data-exp>
+          <li class="exp__step is-on">
+            <span class="exp__dot" aria-hidden="true"><i></i></span>
+            <div><h3>Concept</h3><p>We meet, we listen, and we come back with a direction — a palette, a mood and a shape for the day.</p></div>
+          </li>
+          <li class="exp__step">
+            <span class="exp__dot" aria-hidden="true"><i></i></span>
+            <div><h3>Planning</h3><p>Budget, venue, guest count and calendar are locked. You get one document that holds every decision.</p></div>
+          </li>
+          <li class="exp__step">
+            <span class="exp__dot" aria-hidden="true"><i></i></span>
+            <div><h3>Design</h3><p>Layouts drawn to scale, florals sampled, linen and lighting chosen. Nothing is left to be imagined.</p></div>
+          </li>
+          <li class="exp__step">
+            <span class="exp__dot" aria-hidden="true"><i></i></span>
+            <div><h3>Coordination</h3><p>Vendors briefed and contracted, deliveries sequenced, a run sheet circulated to everyone involved.</p></div>
+          </li>
+          <li class="exp__step">
+            <span class="exp__dot" aria-hidden="true"><i></i></span>
+            <div><h3>Execution</h3><p>Our crew arrives before anyone else and leaves after everyone else. You simply attend your own celebration.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PORTFOLIO ============================= -->
+<section class="section" id="work" aria-labelledby="work-h">
+  <div class="shell">
+    <div class="sec-head sec-head--split">
+      <p class="eyebrow" data-reveal><span class="eyebrow__num">06</span> Portfolio</p>
+      <h2 class="d2" id="work-h" data-reveal style="--i:1">A record of rooms<br>we've filled.</h2>
+      <p class="lede" data-reveal style="--i:2">
+        Fifteen moments from weddings, birthdays, showers and boardroom celebrations.
+        Filter by the kind of day you're planning.
+      </p>
+    </div>
+
+    <div class="work__bar" data-reveal role="group" aria-label="Filter portfolio by event type">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-filter="wedding" aria-pressed="false">Weddings</button>
+      <button class="filter" type="button" data-filter="birthday" aria-pressed="false">Birthdays</button>
+      <button class="filter" type="button" data-filter="baby" aria-pressed="false">Baby Showers</button>
+      <button class="filter" type="button" data-filter="engagement" aria-pressed="false">Engagements</button>
+      <button class="filter" type="button" data-filter="anniversary" aria-pressed="false">Anniversaries</button>
+      <button class="filter" type="button" data-filter="corporate" aria-pressed="false">Corporate</button>
+      <p class="work__count"><span data-work-count>15</span> projects</p>
+    </div>
+
+    <div class="masonry" data-masonry>
+      <figure class="tile" data-cat="wedding" data-reveal>
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/29040997/pexels-photo-29040997.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=600&amp;fit=crop" alt="Round banquet tables in ivory linen with tall floral centrepieces." loading="lazy" decoding="async" width="800" height="600">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Lakeside Vows</span><span class="tile__s">Wedding &middot; Khandala</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="birthday" data-reveal style="--i:1">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/11712500/pexels-photo-11712500.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1067&amp;fit=crop" alt="A tiered celebration cake lit by warm string lights." loading="lazy" decoding="async" width="800" height="1067">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Forty, Quietly</span><span class="tile__s">Birthday &middot; Powai</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="engagement" data-reveal style="--i:2">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/31046060/pexels-photo-31046060.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1000&amp;fit=crop" alt="A loosely gathered bouquet of white blooms held against a pale dress." loading="lazy" decoding="async" width="800" height="1000">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">The Roka Morning</span><span class="tile__s">Engagement &middot; Thane</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="wedding" data-reveal style="--i:3">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/33417236/pexels-photo-33417236.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1000&amp;fit=crop" alt="A garden gateway dressed in marigold and drapes leading to a ceremony lawn." loading="lazy" decoding="async" width="800" height="1000">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Garden Entrance</span><span class="tile__s">Wedding &middot; Nashik</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="anniversary" data-reveal style="--i:4">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/28678990/pexels-photo-28678990.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=600&amp;fit=crop" alt="A chandelier lighting the archway into a formal reception hall." loading="lazy" decoding="async" width="800" height="600">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Twenty-Five Years</span><span class="tile__s">Anniversary &middot; Bandra</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="baby" data-reveal style="--i:5">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/5420705/pexels-photo-5420705.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=800&amp;fit=crop" alt="A pastel dessert display of macarons and small cakes on a styled table." loading="lazy" decoding="async" width="800" height="800">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Almost Here</span><span class="tile__s">Baby Shower &middot; Andheri</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="wedding" data-reveal style="--i:6">
+        <div class="tile__frame">
+          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&amp;fit=crop&amp;w=800&amp;h=533&amp;crop=entropy&amp;q=80" alt="Two ceremony chairs framed by floral arrangements on a lawn." loading="lazy" decoding="async" width="800" height="533">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Two Chairs, One Lawn</span><span class="tile__s">Wedding &middot; Alibaug</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="corporate" data-reveal style="--i:7">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/4717558/pexels-photo-4717558.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1000&amp;fit=crop" alt="A ballroom of round tables set with gilded chairs for a formal dinner." loading="lazy" decoding="async" width="800" height="1000">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">The Awards Floor</span><span class="tile__s">Corporate &middot; Lower Parel</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="birthday" data-reveal style="--i:8">
+        <div class="tile__frame">
+          <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;crop=entropy&amp;q=80" alt="A long dining table dressed for a celebration dinner." loading="lazy" decoding="async" width="800" height="800">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">The Long Table</span><span class="tile__s">Birthday &middot; Juhu</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="baby" data-reveal style="--i:9">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/32476124/pexels-photo-32476124.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1067&amp;fit=crop" alt="White hydrangea arrangements lining a petal-strewn aisle." loading="lazy" decoding="async" width="800" height="1067">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Sugar &amp; Cloud</span><span class="tile__s">Baby Shower &middot; Powai</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="engagement" data-reveal style="--i:10">
+        <div class="tile__frame">
+          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;crop=entropy&amp;q=80" alt="Glasses raised in a toast at a celebration table." loading="lazy" decoding="async" width="800" height="600">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">To the Two of You</span><span class="tile__s">Engagement &middot; Worli</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="anniversary" data-reveal style="--i:11">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/16120248/pexels-photo-16120248.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1000&amp;fit=crop" alt="A round dinner table dressed in gold with a deep floral centrepiece." loading="lazy" decoding="async" width="800" height="1000">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">A Private Dinner</span><span class="tile__s">Anniversary &middot; Colaba</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="wedding" data-reveal style="--i:12">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=533&amp;fit=crop" alt="A tall hydrangea centrepiece on a formally laid banquet table." loading="lazy" decoding="async" width="800" height="533">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">White on White</span><span class="tile__s">Wedding &middot; Thane</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="corporate" data-reveal style="--i:13">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/18823960/pexels-photo-18823960.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=600&amp;fit=crop" alt="Outdoor dining tables set against a wall of greenery." loading="lazy" decoding="async" width="800" height="600">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">Partners' Offsite</span><span class="tile__s">Corporate &middot; Lonavala</span></figcaption>
+        </div>
+      </figure>
+
+      <figure class="tile" data-cat="birthday" data-reveal style="--i:14">
+        <div class="tile__frame">
+          <img src="https://images.pexels.com/photos/19717706/pexels-photo-19717706.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=1000&amp;fit=crop" alt="Tiered stands of small desserts arranged on a marble table." loading="lazy" decoding="async" width="800" height="1000">
+          <span class="tile__scrim" aria-hidden="true"></span>
+          <figcaption class="tile__cap"><span class="tile__t">The Dessert Hour</span><span class="tile__s">Birthday &middot; Bandra</span></figcaption>
+        </div>
+      </figure>
+    </div>
+
+    <p class="vh" role="status" aria-live="polite" data-work-status>Showing all 15 projects.</p>
+
+    <div class="work__foot">
+      <p class="muted small">Photography from past celebrations. Every event is designed from scratch — nothing here is a package.</p>
+      <a class="link-u" href="#enquiry">Start your enquiry <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY CHOOSE US ============================ -->
+<section class="section section--paper" aria-labelledby="why-h">
+  <div class="shell">
+    <div class="sec-head sec-head--split">
+      <p class="eyebrow" data-reveal><span class="eyebrow__num">07</span> Why Atithya</p>
+      <h2 class="d2" id="why-h" data-reveal style="--i:1">The difference is<br>in how it's held.</h2>
+      <p class="lede" data-reveal style="--i:2">
+        Anyone can hire a decorator. What families come back for is the part that happens
+        between the drawings and the doorway.
+      </p>
+    </div>
+
+    <div class="why__grid">
+      <div class="why__item" data-reveal><span class="why__n">01</span><h3>Personalised Concepts</h3><p>No packages, no repeated set-ups. Every event is drawn for the people it belongs to.</p></div>
+      <div class="why__item" data-reveal style="--i:1"><span class="why__n">02</span><h3>End-to-End Management</h3><p>One studio from first call to load-out. Nothing falls between two vendors.</p></div>
+      <div class="why__item" data-reveal style="--i:2"><span class="why__n">03</span><h3>Creative Styling</h3><p>Considered palettes, real florals and lighting that flatters both the room and the photographs.</p></div>
+      <div class="why__item" data-reveal style="--i:3"><span class="why__n">04</span><h3>Professional Coordination</h3><p>Contracts, timelines and briefings handled in writing — so the day runs on a plan, not on hope.</p></div>
+      <div class="why__item" data-reveal style="--i:4"><span class="why__n">05</span><h3>Attention to Detail</h3><p>Napkin folds, cable runs, the height of a centrepiece. The small things are the whole thing.</p></div>
+      <div class="why__item" data-reveal style="--i:5"><span class="why__n">06</span><h3>A Stress-Free Day</h3><p>Your phone stays in your pocket. Vendors call us, and we solve it before you hear about it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= HOW IT WORKS ============================= -->
+<section class="section" aria-labelledby="how-h">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="eyebrow" data-reveal><span class="eyebrow__num">08</span> How It Works</p>
+      <h2 class="d2" id="how-h" data-reveal style="--i:1">Four steps, and the rest is ours.</h2>
+    </div>
+
+    <div class="steps" data-steps>
+      <span class="steps__line" aria-hidden="true"></span>
+      <div class="step" data-reveal>
+        <span class="step__mark" aria-hidden="true"></span>
+        <p class="step__n">01</p><h3>Tell Us Your Vision</h3>
+        <p>Share the occasion, the date, the guest count and the budget you're working with. A short call is usually enough.</p>
+      </div>
+      <div class="step" data-reveal style="--i:1">
+        <span class="step__mark" aria-hidden="true"></span>
+        <p class="step__n">02</p><h3>We Design the Experience</h3>
+        <p>You receive a concept, a layout and a transparent cost sheet — with options, not pressure.</p>
+      </div>
+      <div class="step" data-reveal style="--i:2">
+        <span class="step__mark" aria-hidden="true"></span>
+        <p class="step__n">03</p><h3>We Plan &amp; Coordinate</h3>
+        <p>Vendors are booked and briefed, deliveries sequenced, and a single run sheet goes out to everyone.</p>
+      </div>
+      <div class="step" data-reveal style="--i:3">
+        <span class="step__mark" aria-hidden="true"></span>
+        <p class="step__n">04</p><h3>You Celebrate</h3>
+        <p>Our crew runs the day end to end. You arrive as a guest at your own celebration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TESTIMONIALS ============================= -->
+<section class="section section--paper" aria-labelledby="voices-h">
+  <div class="shell">
+    <div class="sec-head sec-head--split">
+      <p class="eyebrow" data-reveal><span class="eyebrow__num">09</span> In Their Words</p>
+      <h2 class="d2" id="voices-h" data-reveal style="--i:1">What families<br>say afterwards.</h2>
+      <p class="lede" data-reveal style="--i:2">Three notes from recent celebrations, shared with permission.</p>
+    </div>
+
+    <div class="quotes">
+      <!-- Replace the three blocks below with real client testimonials -->
+      <figure class="quote" data-reveal>
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>We'd resigned ourselves to running our own daughter's wedding. Atithya took the whole thing — three functions, 320 guests — and the only thing I did on the day was cry at the right moment.</p></blockquote>
+        <figcaption class="quote__by">
+          <span class="quote__stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg></span>
+          <span class="quote__name">Anita &amp; Rajesh Deshpande</span>
+          <span class="quote__ev">Wedding &middot; Alibaug</span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote" data-reveal style="--i:1">
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>I sent them one photograph and a colour I liked. What arrived was better than anything I'd pictured, and my mother-in-law still talks about the dessert table.</p></blockquote>
+        <figcaption class="quote__by">
+          <span class="quote__stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg></span>
+          <span class="quote__name">Sneha Kulkarni</span>
+          <span class="quote__ev">Baby Shower &middot; Powai</span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote" data-reveal style="--i:2">
+        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>We host an awards night every year and it has never run this cleanly. Their coordinator knew the schedule better than our own team did.</p></blockquote>
+        <figcaption class="quote__by">
+          <span class="quote__stars" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26 6.85.72-5.1 4.6 1.42 6.72L12 16.9 5.93 20.3l1.42-6.72-5.1-4.6 6.85-.72L12 2Z"/></svg></span>
+          <span class="quote__name">Farhan Qureshi</span>
+          <span class="quote__ev">Corporate Awards Night &middot; Lower Parel</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================================= FAQ ================================= -->
+<section class="section" aria-labelledby="faq-h">
+  <div class="shell">
+    <div class="faq__grid">
+      <div class="faq__aside">
+        <p class="eyebrow" data-reveal><span class="eyebrow__num">10</span> Questions</p>
+        <h2 class="d2" id="faq-h" data-reveal style="--i:1">Before you<br>get in touch.</h2>
+        <p data-reveal style="--i:2">If your question isn't here, message us on WhatsApp — we usually reply the same day.</p>
+        <a class="link-u" href="#" data-wa-direct data-reveal style="--i:3">Ask us directly <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="acc" data-acc>
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-b">
+            What types of events do you manage?<span class="acc__ico" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-1" role="region" aria-labelledby="faq-1-b"><div>
+            <p>Weddings and all their attendant functions, engagements and roka ceremonies, birthdays from first to eightieth, baby showers, naming ceremonies, anniversaries, house parties and corporate evenings — launches, award nights and offsites. If it involves guests, a room and a timeline, it's within our range.</p>
+          </div></div>
+        </div>
+
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-b">
+            How far in advance should I book?<span class="acc__ico" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-2" role="region" aria-labelledby="faq-2-b"><div>
+            <p>For weddings, six to nine months gives us the best choice of venues and vendors. For birthdays, showers and private dinners, ten to fourteen weeks is comfortable. We do take shorter timelines when the calendar allows — ask, and we'll tell you honestly whether we can do it well.</p>
+          </div></div>
+        </div>
+
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-b">
+            Do you provide décor and styling?<span class="acc__ico" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-3" role="region" aria-labelledby="faq-3-b"><div>
+            <p>Yes — it's the heart of what we do. Concept, palette, florals, linen, lighting, signage, stage and tabletop are all designed in-house and produced with partners we've worked with for years. You'll see layouts and samples before anything is ordered.</p>
+          </div></div>
+        </div>
+
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-b">
+            Can you work with our preferred venue?<span class="acc__ico" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-4" role="region" aria-labelledby="faq-4-b"><div>
+            <p>Absolutely. We're happy to work in a venue you've already chosen — hotel, farmhouse, banquet hall, clubhouse or your own home. We'll do a site visit early, confirm what the venue allows, and design within those constraints. If you haven't chosen yet, we'll shortlist options that suit your guest count and budget.</p>
+          </div></div>
+        </div>
+
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-b">
+            Can you work within a specific budget?<span class="acc__ico" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-5" role="region" aria-labelledby="faq-5-b"><div>
+            <p>Yes, and we'd rather you tell us the real number at the start. We plan within it and show you where every rupee is going in a written cost sheet. Where the budget is tight, we'll tell you which two or three elements will carry the room and where it's safe to spend less.</p>
+          </div></div>
+        </div>
+
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-b">
+            Do you manage vendors and event-day coordination?<span class="acc__ico" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-6" role="region" aria-labelledby="faq-6-b"><div>
+            <p>We do. Catering, photography, sound, lighting, entertainment, transport and staffing are briefed, contracted and scheduled by us. On the day, a dedicated coordinator and crew are on site from load-in to load-out, working from a single run sheet — so no one in your family fields a vendor call.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENQUIRY FORM ============================ -->
+<section class="section section--paper" id="enquiry" aria-labelledby="enq-h">
+  <div class="shell">
+    <div class="enq__grid">
+      <div class="enq__aside">
+        <p class="eyebrow" data-reveal><span class="eyebrow__num">11</span> Enquiry</p>
+        <h2 class="d2" id="enq-h" data-reveal style="--i:1">Let's plan<br>something beautiful.</h2>
+        <p class="lede" data-reveal style="--i:2">
+          Tell us about your celebration and we'll help bring your vision to life.
+          Your details go straight to our WhatsApp — you'll press send yourself.
+        </p>
+
+        <dl class="enq__contacts" data-reveal style="--i:3">
+          <div class="enq__c"><dt>Call or WhatsApp</dt><dd><a data-href="tel" href="tel:+919137172872"><span data-site="phone">+91 91371 72872</span></a></dd></div>
+          <div class="enq__c"><dt>Email</dt><dd><a data-href="mail" href="mailto:hello@atithyaevents.in"><span data-site="email">hello@atithyaevents.in</span></a></dd></div>
+          <div class="enq__c"><dt>Studio</dt><dd><span data-site="city">Thane &amp; Mumbai</span></dd></div>
+          <div class="enq__c"><dt>Hours</dt><dd>Mon&ndash;Sat, 10am &ndash; 7pm</dd></div>
+        </dl>
+
+        <a class="btn btn--ghost" href="#" data-wa-direct data-reveal style="--i:4">
+          <svg class="btn__i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Chat with us on WhatsApp
+        </a>
+
+        <p class="enq__note" data-reveal style="--i:5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.9 8 10 4.6-1.1 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          Nothing is sent automatically. We build the message, WhatsApp opens, and you review it before pressing send.
+        </p>
+      </div>
+
+      <div data-reveal style="--i:2">
+        <form class="form" id="enquiry-form" novalidate>
+          <div class="form__grid">
+            <div class="field">
+              <label for="f-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Rahul Sharma"
+                     required aria-required="true" aria-describedby="e-name">
+              <p class="field__err" id="e-name"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-phone">WhatsApp / Phone Number <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 91371 72872"
+                     required aria-required="true" aria-describedby="e-phone">
+              <p class="field__err" id="e-phone"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-type">Event Type <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-type" name="eventType" required aria-required="true" aria-describedby="e-type">
+                <option value="">Select an occasion</option>
+                <option>Birthday</option>
+                <option>Baby Shower</option>
+                <option>Anniversary</option>
+                <option>Engagement</option>
+                <option>Wedding</option>
+                <option>Naming Ceremony</option>
+                <option>Corporate Event</option>
+                <option>Private Party</option>
+                <option>Other</option>
+              </select>
+              <p class="field__err" id="e-type"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-date">Preferred Event Date</label>
+              <input id="f-date" name="date" type="date" aria-describedby="e-date">
+              <p class="field__err" id="e-date"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-location">Event Location <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-location" name="location" type="text" autocomplete="address-level2" placeholder="Thane, Mumbai"
+                     required aria-required="true" aria-describedby="e-location">
+              <p class="field__err" id="e-location"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-guests">Number of Guests</label>
+              <input id="f-guests" name="guests" type="number" inputmode="numeric" min="1" max="100000" step="1"
+                     placeholder="50" aria-describedby="e-guests">
+              <p class="field__err" id="e-guests"></p>
+            </div>
+
+            <div class="field field--full">
+              <label for="f-budget">Estimated Budget</label>
+              <select id="f-budget" name="budget">
+                <option value="">Select a range</option>
+                <option>Under &#8377;25,000</option>
+                <option>&#8377;25,000 &ndash; &#8377;50,000</option>
+                <option>&#8377;50,000 &ndash; &#8377;1,00,000</option>
+                <option>&#8377;1,00,000 &ndash; &#8377;2,00,000</option>
+                <option>&#8377;2,00,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label for="f-notes">Additional Requirements</label>
+              <textarea id="f-notes" name="notes" rows="4"
+                        placeholder="Theme ideas, must-haves, vendors you've already booked, anything we should know."></textarea>
+            </div>
+          </div>
+
+          <div class="form__foot">
+            <button class="btn btn--wide" type="submit">
+              <svg class="btn__i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Send Enquiry on WhatsApp
+            </button>
+            <p class="form__legal">
+              We'll only use these details to plan your event. No newsletters, no lists.
+            </p>
+          </div>
+
+          <!-- Fallback / confirmation panel -->
+          <div class="ready" data-ready data-show="false" role="status" aria-live="polite">
+            <h3 class="d4" data-ready-title>Your enquiry is ready. Open WhatsApp to send it.</h3>
+            <p class="small muted">Your details are safe here — nothing is lost if WhatsApp doesn't open.</p>
+            <pre class="ready__msg" data-ready-msg></pre>
+            <div class="ready__acts">
+              <a class="btn" data-ready-open href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+              <button class="btn btn--ghost" type="button" data-ready-copy>Copy message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FINAL CTA ============================== -->
+<section class="cta" aria-labelledby="cta-h">
+  <div class="cta__media">
+    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&amp;fit=crop&amp;w=1400&amp;h=933&amp;crop=entropy&amp;q=80" srcset="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&amp;fit=crop&amp;w=900&amp;h=600&amp;crop=entropy&amp;q=80 900w, https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&amp;fit=crop&amp;w=1800&amp;h=1200&amp;crop=entropy&amp;q=80 1800w" sizes="100vw"
+         alt="Guests showering a couple with confetti as they leave their celebration." loading="lazy" decoding="async" width="1800" height="1200">
+  </div>
+  <div class="cta__scrim" aria-hidden="true"></div>
+  <div class="shell shell--narrow">
+    <p class="eyebrow cta__eyebrow" data-reveal>Now booking for the coming season</p>
+    <h2 class="d2" id="cta-h" data-reveal style="--i:1">Let's make your next celebration unforgettable.</h2>
+    <p data-reveal style="--i:2">Tell us what you're planning and let's create something beautiful together.</p>
+    <div class="btn-row" data-reveal style="--i:3">
+      <a class="btn btn--light" href="#enquiry">Plan Your Event</a>
+      <a class="btn btn--onDark" href="#" data-wa-direct>Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================ FOOTER ================================ -->
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <p class="foot__word">Atithya<i aria-hidden="true">.</i></p>
+        <p>A boutique events studio designing and managing weddings, birthdays, showers and corporate celebrations across <span data-site="city">Thane &amp; Mumbai</span> — concept to final toast.</p>
+        <div class="foot__social">
+          <a data-href="instagram" href="https://www.instagram.com/atithya_events_thane/" target="_blank" rel="noopener noreferrer" aria-label="Atithya Events Thane on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" data-wa-direct aria-label="Chat with Atithya on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Events</h4>
+        <ul class="foot__list">
+          <li><a href="#events">Weddings</a></li>
+          <li><a href="#events">Birthdays</a></li>
+          <li><a href="#events">Baby Showers</a></li>
+          <li><a href="#events">Engagements</a></li>
+          <li><a href="#events">Naming Ceremonies</a></li>
+          <li><a href="#events">Corporate Events</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Studio</h4>
+        <ul class="foot__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#enquiry">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Get in touch</h4>
+        <ul class="foot__list">
+          <li><a data-href="tel" href="tel:+919137172872"><span data-site="phone">+91 91371 72872</span></a></li>
+          <li><a data-href="mail" href="mailto:hello@atithyaevents.in"><span data-site="email">hello@atithyaevents.in</span></a></li>
+          <li><span data-site="city">Thane &amp; Mumbai</span></li>
+        </ul>
+        <a class="btn btn--onDark" style="margin-top:1.3rem" href="#" data-wa-direct>Chat on WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="foot__bottom">
+      <p>&copy; <span data-year>2026</span> Atithya Events Thane. All rights reserved.</p>
+      <p>Designed &amp; built with care.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="#" data-wa-direct data-wa-float aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<noscript>
+  <style>
+    [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
+    .line-mask > span{transform:none !important}
+    .acc__panel{grid-template-rows:1fr !important}
+    .exp__step{opacity:1 !important}
+  </style>
+</noscript>
+
+<!-- Configuration first, then behaviour -->
+<script src="assets/js/site.config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
